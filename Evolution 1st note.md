@@ -1112,3 +1112,516 @@ $$N_e = 10^4$$
 - 並且以分子鐘等工具追溯，覺得這個轉座子的移位發生在1819年，**也跟工業革命對得上 !!** 😲
 
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/molecular_data_shows_that_Biston_betularia_become_melanic_due_to_the_insertion_of_transposable_element_on_cortex_gene_1022.png)
+
+### 演化與統計學
+- 如果說我們試著畫出一個座標圖，橫軸是父母的平均體長，在correlation上，子代平均的體長應該會和其父母的體長平均呈現正相關 (也就是爸媽越高，小孩平均越高)
+- 然而，在篩選的條件下，由於某些體長的子代被偏好，他們基因池的allele頻率增加，例如，如果體長太短容易被淘汰，剩下少數的個體群平均下來，體長便會增加 (可以想像成，短體長的基因被淘汰掉了)
+- 因此統計下，下一代的平均體長就會上升
+
+> [!Important]
+> - 這特徵需要有**一定的遺傳率**，若特徵被選擇所偏好，但是沒辦法遺傳，演化就無法發生 🐱
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/selection_affect_the_mean_size_of_offspring_1023.png)
+
+#### 適應度
+
+> [!Important]
+> - Absolute fitness (W) 問「你實際留下多少後代？」
+> - Relative fitness (w) 問「你跟別人比，誰留下比較多？」
+
+- 例如，如果等位基因Aa留下了4個子代，那W = 4
+- 而relative，通常會**把各自的W相除**，通常分母以W最大的為主，所以w最大就是1
+- 在數學上來看，大概就是這個樣子: 
+
+$$w_{11} = \frac{W_{11}}{W_{11}}=1\quad w_{12}=\frac{W_{12}}{W_{11}}\quad w_{22}=\frac{W_{22}}{W_{11}}$$
+
+- 大寫的 $W$ 就是absolute fitness，小寫的 $w$ 則是 relative fitness
+
+### positive selection
+- 最簡單的一種自然選擇概念
+- 自然選擇偏好適應度較高的個體，而且沒有任何trade off的問題
+- 這相當於該突變讓個體**獲得了單純的好處**
+
+### 大型選擇性掃掠
+- 在計算某個allele在基因池的頻率時，我們可以把不同基因型的relative fitness算出來
+- 以 "不完全顯性" 為例，如果 $A_2$ 是能提升適應度的allele，那三個genotype的相對適應度分別是: 
+
+$$A_1A_1=1\quad A_1A_2 = 1+s\quad A_2A_2 = 1 + 2s$$
+
+- 在上一章我們提到了 $s$ ，selection coefficient，也就是描述的是一個性狀被prefer的狀況。
+  - 如果s > 0，代表說此性狀讓該個體被偏好活下來
+  - 如果 s < 0，代表說此性狀讓該個體被容易淘汰
+  - 如果s = 0，代表該性狀並不影響個體的適應性 (痾，例如你的手指長度對於鬣狗的捕食情形? 🤣)
+
+##### gene fix
+- 該基因在非常強勢的情況下，沒過多久就會佔據大部分的基因頻率，進而壓縮其他的基因，使**整個基因池的多樣性下降**
+- 可以看看該allele的一個頻率-時間軸，不同s會讓他頻率上升的速度不一樣，但是當最終**frequency趨於飽和 (100%)** 時，便完成了selective sweep，這時我們會說**該基因被 fixed**
+- 可以發現，s越高，頻率上升越快，越早出現飽和
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/rapid_advantage_allele_fix_reflects_higher_value_of_selection_coefficient_1023.png)
+
+> [!Note]
+> - 適應度高的allele被固定下來的時間 $\approx$ 4/s，這個時間尺度是以世代為單位。
+> - 例如，如果s = 0.1，那該基因大概過了40代就會被固定下來
+
+#### allele 演化的速度
+- 在 $s$ 值較小的情況下，allele 的演化速度 $\Delta p$ 可以近似為: 
+
+$$\Delta p \approx sp(1-p)$$
+
+- 當p隨著時間變化，而s為常數時，可以發現， $\Delta p$ 最大的時候，其實是在p = 0.5時
+- 無論A2的基因太多或是太少，基本上演化的速度相對會慢
+- 如果把 $\Delta p$ 畫出來，你會得到一個倒U型的二次曲線 (不是常態分佈 !!)
+
+#### 顯隱性的影響
+
+> [!Tip]
+> 同樣是一個有利的 A2 allele，為什麼它是不是 dominant / recessive，會讓 selective sweep 的速度差這麼多？ 🤔
+
+- 這時就要提到剛剛的 relative fitness 問題
+- 如果考慮了顯性隱性實際影響個體的適應度，你應該得到的相對適應度如下: 
+
+|genotype| $A_1A_1$ | $A_1A_2$ | $A_2A_2$ |
+|---|---|---|---|
+|relative fintess, $w$ |1 | 1+hs| 1+s|
+
+- 其中h代表我要測量的基因 ( $A_2$ )，到底表現多少 (在此處，h = 0、0.5、1)
+  - 如果你的A2為顯性，那相對fitness應該就是1、1+s、1+s
+  - 相反，如果是隱性，就是1、1、1+s
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/whether_advantage_allele_is_dominant_or_not_can_affect_the_speed_of_gene_fixation_1023.png)
+
+<iframe src="https://Jacklyn301.github.io/interaction_chart_with_AI/selective_sweep_explorer.html" width="100%" height="600px"></iframe>
+
+- 在上圖中，三條線都以 "A2 是 beneficial allele" 為基礎，從非常低的 frequency 開始，最後接近 fixation 的狀態
+- 唯一不同的是，A2 的 fitness effect 怎麼表現，也就是分成顯性、不完全顯性、以及隱性
+- 可以發現它們的上升速度有所不同，**尤其是recessive有一個明顯的lag phase**，這讓 $A_2$ allele 過了很多代之後才顯現出其優勢
+
+#### evolutionary trade-off
+- **一個提升某種性狀適應的等位基因，可能會降低另外一種性狀適應**
+- 例如較深的膚色有利於抵禦強烈 UV，但會降低 UVB 穿透皮膚，進而可能影響 vitamin D 合成
+- **人類的膚色和SLC245A突變有關係**，如果膚色較淺，你確實吸收更多vitamin D，但是皮膚癌的風險上升
+
+> [!Tip]
+> - 魚和熊掌不可兼得 🐟🐻
+
+- 還有一個例子就是**soay sheep**。他有兩個allele: $Ho^+$ 跟 $Ho^p$ ，分別代表長角跟短角
+- 長角的羊更容易找到伴侶 (性擇)，但是命短，尤其是同型合子 $Ho^+ Ho^+$
+- 而短角羊 ( $Ho^p$ ) 雖然不容易找到伴侶，但是有更高存活率
+- 經過一番比對，**相對適應度最強的，就是 "異型合子"** 😲
+
+#### hitchhiking
+> [!Important]
+> - 最大原因: **連鎖不平衡 (linkage disequilibrium, LD)** 😏
+
+- 假如說條紋跟黃色的基因有連鎖，而粉色的蝸牛可能有條紋，也可能沒有
+- 如果鳥類特別愛條紋蝸牛，在selection之後，你會發現只剩下粉色無條紋蝸牛
+- 但**並不是因為黃色性狀不適合生存，而是因為黃色的蝸牛一定有條紋，而鳥類喜歡有條紋的蝸牛**
+- 這也被稱為hitchhiking (搭便車效應)
+- 所以，即使在自然選擇下，主要影響的是A基因，但是，因為B跟A有 **"連鎖" (D>0)**，這導致B基因的頻率也有所改變。 $\Delta p_B$ 被 $s_A$ 影響 !! 😏
+- 因此，這時B基因的演化速率，就會變成: 
+
+$$\Delta p_B \approx s_A D$$
+
+> [!Note]
+> B 自己沒有 selection，但如果它跟正在被 selection 的 A 有連鎖不平衡，那麼 **A 的 selection 可以間接改變 B 的 frequency**
+
+#### 搭便車掃掠 (?)
+- 由於連鎖效應，即使某個基因根本沒有影響fitness，他依然可能會在基因池裡的頻率增加。因為... **他旁邊正好有一個有利的突變**
+- 然後他就在這個**突變基因的尊榮 (?) 下，一起增加allele frequency**，即使他根本沒有positive selection 的效果 😗
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/neutral_gene_get_fixed_due_to_hitchhiking_with_another_positive_selection_gene_1023.png)
+
+#### Corn domestication
+- 當人類在**改良大芻草**的時候，偏好了**tb1 gene**，該基因會增加頂芽優勢，使**側枝大幅減少**
+- 我們可以發現，相對於玉米，大芻草tb1 locus周圍的基因多樣性 (heterozygousity) 明顯更高，而**玉米幾乎為0**
+- 也就是說，很多不同 maize 品系，在這一大段區域的 DNA 都非常相似，就是因為**人類刻意fixed這個基因，而周圍的序列也一起被fixed了**
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/heterozygosity_nearby_on_the_tb1_gene_locus_was_drastically_reduced_in_maize_compared_to_teosinte_1023.png)
+
+### 常設型的遺傳變異
+
+> 先想像兩種情況...
+
+#### New mutation → hard selective sweep
+- 假設某天突然出現一個 beneficial mutation，並且最開始只有一個 chromosome 帶著 A* ，所以 "A* + 附近的haplotype" 是 **"一整組綁在一起的"**
+- 所以該基因附近會出現核甘酸多態性下降，基因多樣性下降，連鎖不平衡高，這種叫做 **"hard selective sweep"**
+
+#### Standing genetic variation → soft sweep
+- 假設A其實在population裡面一段時間，足夠recombination改變A附近的基因
+- 或者是**A有透過拷貝讓自己變多**
+- 當環境突然讓A變得有利時，多條原本帶著A的haplotypes被同時選中
+- 這時就**比較不會出現 "一大段都一樣"** 的狀況，這種溫和的版本，也被稱為**soft selective sweep，或是常設型的遺傳變異**
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/standing_genetic_mutation_lead_to_soft_selective_sweep_which_keeps_genetic_variation_1023.png)
+
+### 三種遺傳的path
+- 分為positive、overdominance、underdominance
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/allele_frequency_change_pattern_depend_on_if_the_gene_is_positive_overdominance_or_underdominance_1023.png)
+
+#### overdominance
+- **異型合子更被偏好**， $w_{12} > w_{11}\quad and \quad w_{22}$
+- 這會讓**allele不可能sweep到接近100%**，在選擇中反而會偏好都保留
+- 最後會達到stable polymorphism
+- 平衡頻率的計算: 
+
+$$p_{A2} = \frac{s1}{s1 + s2}$$
+
+- 偏好去保留多樣性 (balancing selection)
+
+##### 以鐮刀型貧血為例
+- S的基因之所以到現在都還存在，很大原因是受到瘧疾影響，攜帶了S allele的基因比例，和瘧疾盛行區有所重疊
+- S allele在瘧疾上更能抵抗 (沒錯，也是trade-off的一個例子 !!)
+- 因此在選擇下，存活率最高的群體，其實是AS基因
+
+##### 齒麗魚
+- 他側邊的嘴巴攻擊其他魚類的體表，刮取小蟲或是藻類
+- 有開左側跟開右側的
+- 假如說多數魚為開左側，攻擊魚的右側，那這些魚會更警惕，避免被攻擊右側而偏向往左邊跑
+- 這時，開右側嘴巴的齒麗魚就更能有機可乘
+
+> [!Tip]
+> 也就是說，每一次更有fitness的基因，就是那些frequency較低的allele 😏
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/the_fitness_of_alleles_change_depending_on_their_own_frequency_especially_by_favouring_the_rare_allele--take_P.microlepis_for_example_1023.png)
+
+#### underdominance
+- **同型合子**更被偏好
+- 這種時候去看allele的frequency會很有趣。如果A2很少，大部分的A2還在異形合子中，就會導致A2可能完全消失。但是如果A2很多，A2在基因池比例為100%的速度會比另外兩個更快上去
+- 這時原本A2所在基因池的比例就超重要，**threshold為50%，過一半，你就會fixed，少一半，那你會消失 :-(**
+
+> [!Tip]
+> 所以說，對於allele來說，如果身處於positive，就算自己頻率低，又或者是屬於recessive，他總有一天還是會fix，但是**underdominance不一定，要看原先的頻率** 🐱
+
+- 舉最簡單的例子，就是**物種的雜交**。很多雜交會導致出現合子後的生殖隔離 (也就是子代不孕)
+- 還有一種就是擬態，假如說某種蝴蝶已經擬態成了另一種有毒的物種，這時的hetrozygous個體可能會因為 "跟別人不一樣" 而更容易被吃
+
+##### 同時輸入跟刪除 （？）
+- 假設我們有兩個 population (如 A、B 向日葵)，直覺上可能會覺得: 
+
+> 「既然 A、B 還是一起生活、還是會交配，那 gene flow 應該會把兩邊重新混在一起吧？」🤔
+
+- 但如果 hybrid fitness 很低，事情會變得非常有趣
+- 這種時候，就會發生 **"Hybridization 本身產生 gene flow，但 selection 又把 hybrid 殺掉"** 的現象，形成一場gene flow跟selection的拔河現象
+- 這還會使得AB間的基因池出現差異，隨著hybrid容易被淘汰，兩邊的gene pool長得越來越不同
+
+> [!Note]
+> 兩個 population 不一定需要演化出「有害 allele」。它們可以各自演化出對自己 population 沒問題的 allele，但兩個 allele 放在一起就出問題
+
+### 演化 = 整體適應度增加?
+#### 又是一個trade-off: 
+> [!Tip]
+> 假如你們族群的植物有不同的生長方式，請問你要矮小但果實多，還是高大但果實小? 🤔
+
+- 假如說一個個體選擇 "高大但果實小"，只要它的相對適應度比其他個體大，就會促使selection發生
+- 最後可能使整個族群都變成 "高大但果實小" 的phenotype
+- 但是，這對於整個族群並沒有提升fitness (甚至變低了，子代產量減少，所以他們的**absolute fitness其實降低**)，但是個體生存上面可能有提高
+
+
+> [!Note]
+> Individual selection 問「在目前這個 environment 裡，誰比誰留下更多 offspring？」，而不是「誰讓整個 population 最健康？」
+
+- 同時，在樹高低的例子裡面， $W_T$ (高大但果實小) 取決於人口裡面有多少跟你一樣的傢伙 (也就是頻率)
+- 在高樹很少的時候， $W_T$ 的優勢自然很高，但是隨著A_T的frequence上升，他的s也逐漸變成0
+- 也就是說他的適應度會隨著selection的變化而越來越低
+
+#### 乳糖不耐症
+> [!Tip]
+> - 為什麼長大後還要吃乳製品?
+
+- 其實根據基因分析，人類祖先多數在長大後，就會關閉自己對乳糖的代謝能力。也就是說，**"乳糖不耐症" 變成了常規操作**
+
+- 但是，在極地或是沙漠地區，難以種植農作物，十分依賴畜牧業產生的產值，因此某些 "長大後還可以吃乳製品" 的基因就被保留下來
+
+> [!Note]
+> - 這個突變其實是屬於單純的positive evolution，而且**非洲跟歐洲出現的乳糖耐受性其實是 "平行演化" (基因突變的區域不同)**
+
+---
+
+## chapter 6
+### 表現型的類型
+- **qualitative:** 定性特徵，不連續，不可被測量
+- **quantitative:** 定量特徵，連續型，可以被測量
+
+#### 方向性演化
+- trait的mean會逐漸往一個方向走，在selection後，mean會有所不同
+- 例如**胡椒蛾翅膀顏色**
+
+##### 角蜥與呆頭伯勞
+- 角蜥的頭上角長度越長，預測生存率越高，因此在自然選擇上就會逐漸讓長角的基因頻率增加 (有刺不好入口? 🤣)
+- 其天敵為*Lanius ludovicianus*，一種喜歡把獵物串在荊棘上的鳴禽 
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/Lanius_ludovicianus_tend_to_use_thorn_to_impale_the_prey_1023.jpg)
+
+#### 穩定性演化
+- trait偏好中庸的狀態，在selection後，中間群體的數量會增加
+- 例如**人類嬰兒大小**
+
+#### 中斷性演化
+- trait偏好極端狀態，中間群體反而不利於生存
+- 例如**達爾文雀對於果實的選擇**
+
+#### 相關性演化
+- 同一種蛇有不同的條紋，而且這些條紋跟他的脫逃行為似乎有關係
+- 最終偏好的trait就變成 **"有條紋並往前走"** 跟 **"有斑點並往後走"** 的兩種蛇 (目前還不知道原因 :3 )
+- 這也被稱為 **correlational selection**
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/Thamnophis_ordinoides_shows_selection_that_favours_particular_combination_of_traits_like_stripedness_and_direction_when_fleeing_1023.png)
+
+### 如何測量演化強度
+#### selection gradient
+- 通常以 $\beta$ 表示
+- $\beta$ = trait value 每增加一點，relative fitness 平均改變多少
+- 例如，你把**樹高跟相對fitness畫成一個二維圖形**，這條相關線的 "斜率"，就是 $\beta$
+
+> [!Note]
+> - 如果beta>0，代表適應度會隨著該定量性狀值越大，越有適應力，反之 🐱
+>   - $\beta > 0$ , directional selection favours **larger value of traits**
+>   - $\beta < 0$ , directional selection favours **smaller value of traits**
+>   - $\beta = 0$ , **no directional selection**
+
+#### heritability
+- 遺傳度，通常以 $h^2$ 表示 
+- 親代性狀改變後，不一定會100%傳給小孩，所以對於子代的性狀改變，還要去考慮該性狀的遺傳度，看看該性狀有多少是受到遺傳決定
+
+##### Breeder’s equation
+- 公式如下: 
+
+$$\Delta \bar{Z} = \bar{Z}^\prime - \bar{Z} = h^2 S$$
+
+- $\Delta \bar{Z}$ 代表下一代平均phenotype改變多少
+- 例如原本平均100 cm，下一代平均106 cm，這時 $\Delta \bar{Z}$ = 6 cm
+- $S$ 代表你拿去繁殖的那群 parent，平均 phenotype 跟原本 population 平均差多少
+- $h^2$ 代表遺傳度
+
+> [!Note]
+> - 如果說，我從母體裡挑幾個頭髮比較長的，然後測量牠們下一代的頭髮。原本population平均10公分，我挑的樣本平均20公分，**S = 10公分，但是h = 0**，所以我不能保證它們子代的頭髮平均會變長
+> - 再強的 $S$ ，**都還是要看可不可以遺傳，遺傳多少 !!** 😏
+
+
+#### Adaptation vs Extinction?
+- 環境產生改變之後，使族群數量大幅下降，這時到底族群會存活下來，並且大幅改變allele frequency，還是會滅絕?
+- 這時影響是否滅絕的條件就包含兩個可能: 
+  - 族群本身**可繁衍後代的個體多寡** (本錢多，K，population size 較大)
+  - 族群**基因池的多樣性** (適應性強，G，genetic variation 較大)
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/population_survival_possibility_depends_on_genetic_variation_and_populaton_size_1023.png)
+
+
+
+### Artificial selection 
+- 人擇的trait演化速度可能比原本的速度還要快 ( $\beta$ 變大? )
+  - 舉剛剛提到的大芻草為例，除了tb1 gene的fixation之外，maize的**含油量也在人擇的影響下，快速增加**
+- 通常來說，越大的族群，演化的速度可以更快
+  - 例如在果蠅實驗中，挑翅膀比較長的雜交來看看狀況
+  - 族群數量會影響翅膀長度的 "增長速度"，在N = 40 跟 N = 1000比起來，後者更容易增長
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/population_size_affect_evolution_speed_in_drosophila_melanogaster_1023.png)
+
+- 當選擇性掃掠出現時，一個trait的fixed對另一個trait往往有負面影響 (trade-off)
+  - 例如，人擇可以挑選比較容易產出乳汁的牛乳，但是由於基因連鎖，**產乳多的牛，生殖能力會下降**
+
+### 再用 $\beta$ 看一次 Breeder’s equation
+- 公式如下: 
+
+$$\Delta Z_1 = G_1\beta_1 + G_{1,2}\beta_2$$
+
+- 其中...
+  - $\Delta z_1$ = 性狀 1 的演化反應，也就是下一代的平均性狀值相對於這一代改變了多少
+  - $G_1$ = 性狀 1 有多少可透過加性遺傳效應傳遞的變異
+  - $\beta_1$ = 性狀 1 本身與相對適存度的關聯方向及強度
+  - $G_{1,2}$ = 性狀 1 和性狀 2 的加性遺傳共變異數，也就是兩個性狀的遺傳效應是否傾向一起變動
+  - $\beta_2$ = 性狀 2 本身受到選擇的方向及強度
+- $G_{1,2}$ 其實間接呈現了連鎖的狀態，也就是說，如果 $G_{1,2} > 0$ ，1 gene跟2 gene是有關聯的
+- **第一項是直接效果，第二項的才是重點 !!**
+
+#### 為什麼性狀2會影響性狀1
+- 假設我們研究兩個性狀: 
+  - z_1 = 雄性的體型大小
+  - z_2 = 雄性的潛水能力
+- 假設自然選擇偏好潛水能力較強的個體，那: 
+
+$$\beta_1 = 0，\beta_2 > 0$$
+
+- (這代表在控制潛水能力後，體型本身沒有額外的直接選擇效果；但潛水能力受到正向選擇)
+- 但是，當你代入公式後，你會發現...
+
+$$\Delta z_1 = G_{1,2} \times \beta_2 > 0$$
+
+> [!Note]
+> - 即使體型不是潛水的能力的自然選擇的重點，但是體型還是會偏向增加，為什麼?
+> - 因為G_{1,2} 不是0，這兩個基因傾向一起遺傳 !! 😏
+
+#### 為什麼會有相關性
+- 造成關聯性的原因，可能是因為....
+  - **linkage disequilibrium** (基因連鎖關係)
+  - **pleiotrophy** (多效性)
+  - **selection favour** (也就是說在自然選擇上，獨立的A基因跟B基因似乎組合在一起更容易生存)
+
+#### spadefoot toad
+- spadefoot toad的蝌蚪，有分成肉食跟雜食
+- 相對來說，**後者的存活率更高**，但是也因此，肉食蝌蚪更快變態，繁衍後代，世代推送的速度更快
+- 同時，肉食的蝌蚪體積也更大
+
+> [!Note]
+> - 這些差別是來自於基因的開關來達成，即使他們是同一種生物，但是**開啟的基因不一**
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/two_types_of_spadefoot_toad_tadpoles--omnivorous_and_carnivorous_1023.png)
+
+#### Reaction norm
+- Reaction norm（反應規範） 指的是：
+  - 同一個 genotype 在不同環境下，可以表現出什麼樣的 phenotype (同樣基因型，不一樣表現型)
+- 這體現了Phenotypic plasticity (性狀可塑性)
+- 不同 genotype 的 reaction norm 可以不同
+- 有些基因型對環境變化很敏感，有些則比較穩定。
+  - 斜率大： phenotype 對環境變化反應較強。
+  - 斜率小： phenotype 相對穩定。
+  - 兩條線交叉： 不同 genotype 在不同環境下的相對表現可能反轉。
+
+#### quantitative trait loci
+- QTL = 基因組中，與某個 quantitative trait (連續可測量) 的變異有關聯的 DNA 區域
+- 例如身高來自於多個loci，而且他們的性狀是可定量分析的
+
+---
+
+## chapter 7
+### before we start the class...
+- 讓我們先介紹後宮佳麗三千的 elephant seal (北象海豹)
+  - 北象海豹的公母體積很不一樣，通常雄性可以長到兩公噸，一生交配的雌性可以有幾千次 (polygyny? 看起來不是 XD)
+  - 而雌性的體積大概只有雄性的三分之一，所以偶爾這傢伙會在交配時把雌性壓死 💀
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/refs/heads/main/southern_male_elephant_seal_mate_with_a_female_individule_1023.avif)
+
+- 18世紀捕獵北象海豹，多數原因是為了dorsal的鯨脂 (blubber)，導致了最後族群個體一度只剩下20隻 😱
+- 之後再次試圖繁衍時，可以看到明顯的族群基因多樣性下降
+
+### genetic drift
+- 遺傳漂變，**Random changes in the frequency**
+- 個體的基因型或是表現型不是他是否能遺傳自己基因的唯一因素，還有****
+- 除此之外，基因的隨機配對、交叉跟互換，也會影響
+
+#### 你以為沒有selection就沒事了嗎?
+- 從下圖中可以發現，這些allele在不同族群的frequency，其實會受到所謂的N影響
+- 如果N比較大，他的frequency其實不會太大，但是隨著N降低，**基因頻率的波動就會增加，甚至基因可能完全丟失**
+
+> [!Tip]
+> 這些圖都是**selection完全沒有的情況下**，產生的頻率變化 !! 😲
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/genetic_drift_can_affect_the_frequency_of_allele_even_without_natural_selection--take_population_size_from_500000_to_5_for_example_1023.png)
+
+### coalescent theory
+- 我們通常想知道，過去的族群如何演化成現在的族群。但 coalescent theory (溯祖理論) 反過來問：
+
+> 如果我們現在抽取幾個個體的 DNA，沿著它們的譜系往過去追溯，它們的共同祖先會在什麼時候出現？
+
+- 假設你從某個族群抽取四個個體，每個人提供一份特定locus的 DNA 序列 (先不管突變，只看每條序列的祖先是誰)
+- 最終可能祖先譜系合併，找到這好多份 DNA 的共同祖先
+
+> [!Note]
+> 要特別注意這裡的「共同祖先」是指這個基因拷貝在特定基因座上的祖先，**不一定是整個生物物種的共同祖先，也不一定是族群中唯一的祖先個體**
+
+##### mitochondrial eve
+- 粒線體夏娃指的是現代人類所有現存母系粒線體 DNA（mtDNA）譜系，往過去追溯後所找到的最近共同祖先
+- 關鍵是：她不是人類歷史上第一個女人，也不是當時唯一活著的女人
+- 但是她符合一個特定條件的共同祖先：
+    - 我們今天每個人的 mtDNA，主要是透過母親傳給我們
+    - 母親的 mtDNA 又來自她的母親，以此類推
+    - 沿著這條「母親 → 外婆 → 曾外婆」的母系路徑往回追溯，所有現存人類的 mtDNA 譜系最終會合併到一位共同祖先
+
+
+> [!Note]
+> 研究通常將 Mitochondrial Eve 的生活年代估計在約 15 萬至 20 萬年前，位於非洲。確切年代取決於突變率、校準方法與演化模型
+
+
+- 這個時間是對母系粒線體譜系共祖時間的估計，不代表現代人類在那個時刻才突然出現。
+- 而且，當時還有其他女性與她同時生活。她們的後代可能也延續至今，只是她們的純母系 mtDNA 傳遞鏈後來中斷了，例如某一代只有兒子，或其後代沒有留下延續至今的母系譜系
+
+> [!Tip]
+> 也就是說，數十萬年間，有無數條母系譜系逐漸分支、消失，**最後所有現存的 mtDNA 譜系都能沿著祖先樹追溯到同一個節點**
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/comparison_between_the_spread_of_autosomal-chromosome_Y-chromosome_and_mtDNA_1023.webp)
+
+### 創始者效應
+- 在1 mya的時候，大概有**九隻草雀** (zebra finch) 從澳洲遷移到了小巽他群島
+- 這些一小撮的鳥類基因多樣性一定比較低，最後在發展過後，這些鳥異型合子的比例比原本在澳洲的鳥減少了8成
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/founder_effect_of_zebra_finch_migrating_from_Australia_to_Lesser_Sundas_1023.png)
+
+#### 人類大遷徙
+- 人類從衣索比亞的首都Ababa開始遷移，最終往各地擴散
+- 挖到的第一隻南方古猿被稱為lucy，他們不斷種化、遷移，走過中東、歐洲、中亞、東亞、大洋洲、最後到北美洲停下
+
+### 每個區域的突變率都一樣嗎?
+- **Adh**是果蠅常見的基因，下圖中，藍色為intron，綠色為exon，每一條黑線都是點突變或是polymorphism
+- 可以發現**intron保留的點突變更多**
+- 這就體現了，連DNA的區域都有自然選擇下的多樣性變化，**exon**更容易受到自然選擇影響，因此**保留下來的點突變微乎其微**，多樣性很少，反之
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/nucleotide_variation_at_Adh_locus_in_drosophila_melanogaster_1023.png)
+
+- 簡單來說，多態性 (polymorphism) 的公式可以近似為如下: 
+- 其中 $\pi$ 為 Heterozygosity， $N_e$ 為有效族群數量 (可以繁衍的個體)， $\mu_n$ 為中性突變率 (也就是不受天擇影響，例如intron，的突變速率)
+
+$$\pi\approx 4N_e \mu_n$$
+
+> [!Caution]
+> - $N_e$ 在現實族群裡，量通常少，而且 **"難以預測"** (畢竟你不知道誰會生)
+
+- 通常來說，如果一個族群的 $N_e$ 超大 (例如剛剛圖中 N = 500000 的驚天數字)，drift的力量就相對更低 (或是說，有更大彈性承受基因池的隨機波動)
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/effective_population_size_in_different_species_1023.png)
+
+#### 那染色體上有突變率差異嗎?
+- 互換的頻率往往在centromere跟telomere附近的基因不太容易互換，也就是長得有點像是...
+
+```text
+   ↑       .          ..
+   |    ... .      ...  .. 
+pi |  ..      ..  ..      .
+   |...         ...        ...
+   -----------------------------→
+   telomere  centromere  telomere
+```
+
+- 而其他地方隨機變化的狀態可能更容易，進而讓該區域的基因多效性增加
+
+> [!Note]
+> - 可能是因為centromere跟telomere附近的基因對於生存異常重要 :3 
+
+#### background selection
+- 如果selective sweep會因為某基因太強勢而減少基因多樣性，那**background selection就是掛掉的個體太多而減少基因多樣性**
+- 如果某些個體有一個有害基因，他掛掉了，結果這傢伙的基因很多別的區域 (尤其是neutral，甚至是別的地方的重要基因)，全部消失
+- 這其實會間接導致neutral的基因池頻率改變，多樣性下降
+
+### selection vs genetic drift
+- 接下來我們把演化跟遺傳漂變加在一起
+- 以positive selection為例，假如說，所有族群的Ne超大，這時基本上基因fix的可能基本上是完全沒問題的
+- 但是隨著Ne變小，positive selection可能會被遺傳漂變壓過 (Ne = 50 跟 Ne = 5)，甚至有些poisitive基因直接在某些族群消失
+- 也就是說...
+  - $s >> 1/N_e$ : selection dominates drift
+  - $s << 1/N_e$ : drift dominates selection
+
+> [!Tip]
+> - 這時，positive selection已經無法絕對導致基因的fix，如果族群不夠大，這些有用的基因還是可能 "運氣不好" 的消失
+> - 你有優勢不代表你就不會有壞運氣啦 🤪
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/natural_selection_and_genetic_drift_interaction--take_population_size_from_500000_to_5_for_example.png)
+
+#### 問題來了
+> [!Caution]
+> - 要是突變是隨機的，但是密碼子的突變不一定會影響trait阿 😑，這樣要怎麼計算??
+
+- 因此這時就要看 "錯義突變 $d_N$ " 跟 "靜默突變 $d_s$ " 的數量比例...
+  - 如果 $d_N$ 比較多，偏向positive selection
+  - 如果 $d_N$ 跟 $d_s$ 一樣，那這個演化就偏向中性
+  - 如果 $d_N$ 偏少，這時就偏向把有害基因去除，也就是purifying selection
+- 大部分的基因突變， $d_N / d_S$ ratio 都小於 1，也就是說，多數時候突變是有害的，purifying selection較常發生
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/most_mutation_of_genes_are_deleterious_and_removed_by_purifying_selecion--dN-dS_ratio_is_usually_smaller_than_1_1023.png)
+
+- 這也是 "中性理論" 的想法之一
+- 中性理論由 Motoo Kimura 提出，認為分子序列變異基本上接近中性，也就是隨機的
+- 如果達爾文的理論偏向 positive selection，那在現實中，由於有了突變跟遺傳漂變的隨機事件發生，物種最後會比較接近 neutral selection (抓起來吊打 Darwin 的鐵拳 🙂)
+
+![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/four_types_of_evolution_theory_comparison_1023.png)
+
