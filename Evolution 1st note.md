@@ -266,8 +266,7 @@ $$Q= \begin{pmatrix} -(\alpha+2\beta) & \alpha & \beta & \beta\\ \alpha & -(\alp
 - 可以分為單系群、測系群跟多系群
 
 #### Monophyletic Group
-- 也被稱clade，包含共同祖先以及全
-- 部後代
+- 也被稱clade，包含共同祖先以及全部後代
 - 例如哺乳類，就是一個完整的clade
 
 #### Paraphyletic Group
@@ -303,10 +302,10 @@ $$Q= \begin{pmatrix} -(\alpha+2\beta) & \alpha & \beta & \beta\\ \alpha & -(\alp
 ##### 例如
 - 假設某段染色體有 3 個 SNP（單核苷酸多型性）：
 
-|位置	 |SNP1|SNP2|SNP3|
-|---|---|---|
-|染色體A|A|G|C|
-|染色體B|T|A|T|
+| 位置   | SNP1 | SNP2 | SNP3 |
+| ---- | ---- | ---- | ---- |
+| 染色體A | A    | G    | C    |
+| 染色體B | T    | A    | T    |
 
 - 因為人有兩套染色體: 
   - 父系染色體：A-G-C
@@ -320,8 +319,8 @@ $$Q= \begin{pmatrix} -(\alpha+2\beta) & \alpha & \beta & \beta\\ \alpha & -(\alp
 
 #### paralogous and orthologous
 - 此處是alpha出現了重複 (duplication)，變成alpha跟beta
-然後經過種化 (speciation) 之後，這基因alpha繼續演化成alpha1跟alpha2，而beta變成beta1跟beta2
-- **Orthologous (直系同源)** 和** Paralogous (旁系同源)** 都屬於 homologous genes（同源基因）
+- 然後經過種化 (speciation) 之後，這基因alpha繼續演化成alpha1跟alpha2，而beta變成beta1跟beta2
+- **Orthologous (直系同源)** 和**Paralogous (旁系同源)** 都屬於 homologous genes（同源基因）
 - 意思是它們來自同一個祖先基因，但形成方式不同
 
 > [!Tip]
@@ -331,14 +330,17 @@ $$Q= \begin{pmatrix} -(\alpha+2\beta) & \alpha & \beta & \beta\\ \alpha & -(\alp
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/image_bank/main/formation_of_orthologous_genes_being_a_product_of_speciation_paralogous%20genes%20within%20a%20species_1019.png)
 
 - 最典型的例子就是 $\alpha$ -hemoglobin跟 $\beta$ -hemoglobin，以及 myoglobin 的關係
-- 可以在裡面同時發現 Ortholog 跟 Paralog 😏
-![image alt](https://raw.githubuserrcontent.com/Jacklyn301/image_bank/main/evolutionay_phylogeny_tree_of_hemoglobin_and_myoglobin_1015.png)
+- 所有球蛋白都有共同祖先，然後後來先衍生出肌紅蛋白 (outgroup)
+- 之後，dublicate出 $\alpha$ 和 $\beta$ 然後不同物種就有不同的 $\alpha$ 和 $\beta$ ，甚至 $\alpha$ 和 $\beta$ 自己也會有內部複製
+- 可以在裡面同時發現一些假基因 (pseudogene)
+
+![image](https://raw.githubusercontent.com/Jacklyn301/image_bank/main/evolutionay_phylogeny_tree_of_hemoglobin_and_myoglobin_1015.png)
 
 #### 性別bias
-- 這是有關於female bias跟male bias，也就是哪個物種的sex較多
+- 這是有關於**female bias跟male bias**，也就是哪個物種的sex較多
 - 為啥XY偏向female bias，ZW偏向male bias? 這**可能是因為染色體出現degrade導致的現象**，如圖: 
 
-![image alt](https://raw.githubusercontent.com/Jacklyn301/image_bank/blob/main/chart_of_gender_bias_in_different_species_1015.png)
+![image alt](https://raw.githubusercontent.com/Jacklyn301/image_bank/main/chart_of_gender_bias_in_different_species_1015.png)
 
 #### 分子鐘
 - 透過分析一個變異需要出現多少年，然後把變異的幅度才預測這東西是在何時出現演化的，公式如下: 
@@ -366,6 +368,9 @@ $$D=2rt$$
 
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/convergent_evolution_in_a_cactus_and_a_euphorb_1017.png)
 
+- 通常分為三種: 平行演化、趨同演化、二次喪失
+- 在講平行演化時，並沒有一個前提，認為一群有共同祖先的類群，但是convergent有共同祖先，只是會強調這並非同源構造
+- 而**secondary loss**就是因為有一兩個物種的該特徵消失，例如魚類整體家群理論上都是硬骨的，但是鯊魚是從硬骨魚中丟失該構造
 #### volutionary reversal
 - 演化逆轉指的是... 一個生物譜系**在演化過程中失去或改變的特徵，又在後代中重新出現，或者演化方向回到較接近祖先狀態**
 
@@ -380,6 +385,9 @@ $$D=2rt$$
 
 - 由於wobble effect，codon的第三個核甘酸變異的速度可以很快
 - 但是第一或是第二個核甘酸由於變化後很容易導致錯義突變，**基本上演化會變得極度保守 (畢竟變異過的通常都活不下去)**
+
+![2_image](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/codon_has_different_rate_of_substitution_1023.png)
+
 - 也由於密碼子的特性，每一個鹼基的變異速度根本不一樣，而且在嚴酷環境下，可存活的物種會出現大量基因差距不一的個體
 - 這就是**輻射演化**
 
@@ -433,7 +441,7 @@ $$D=2rt$$
 - 蛇的嘴巴非常神奇，上下顎還有方骨連接，可以把下顎延伸，而且還有彈性的韌帶
 - 這屆世為什麼他可以吃掉袋鼠... 🙂
 
-![image alt](https://raw.githubusercontent.com/Jacklyn301/image_bank/main/an_example_that_a_giant_snake_is_consuming_a_kangaroo_1020.png)
+********![image alt](https://raw.githubusercontent.com/Jacklyn301/image_bank/main/an_example_that_a_giant_snake_is_consuming_a_kangaroo_1020.png)
 
 ### let's get started !
 - adaptation: 生物體在世代交替過程中，透過改變影響族群中的個體差異，使其在生存或是某些特徵上得到改善
@@ -441,8 +449,8 @@ $$D=2rt$$
 
 #### Pleisomorphy vs Apomorphy
 > [!Tip]
-> - Plesiomorphy (祖徵、原始性狀) = 老祖宗就有的特徵
-> - Apomorphy (衍徵、衍生性狀) = 後來演化出來的新特徵
+> - **Plesiomorphy (祖徵、原始性狀)** = 老祖宗就有的特徵
+> - **Apomorphy (衍徵、衍生性狀)** = 後來演化出來的新特徵
 
 - 例如我們以一顆模擬的樹為例: 
 
@@ -451,7 +459,7 @@ flowchart LR
 
 chord([脊索])-->jaw([下顎])-->A([脊椎])-->B([四肢])-->C([羊膜])-->D([恆溫])-->E([胎盤])
 chord-->lancelet([文昌魚])
-jaw-->placo([頓皮魚])
+jaw-->placo([盾皮魚])
 A-->fish([硬骨魚])
 B-->frog([兩棲類])
 C-->reptile([爬蟲類])
@@ -460,7 +468,7 @@ E-->mammal([哺乳類])
 
 ```
 
-- 對於羊膜動物來說，組徵就是下顎跟脊椎，以及羊膜
+- 對於羊膜動物來說，祖徵就是下顎跟脊椎，以及羊膜
 - 衍徵就包含真獸類的胎盤，或是有袋類的育兒袋
 
 ### darwin怎麼看?
@@ -488,9 +496,9 @@ E-->mammal([哺乳類])
   - 生長速度慢
   - 要長到數年後才會形成可採收的鱗莖
   - 公斤藥材大約需要 3500 多株植物的鱗莖
-- 所以它開始「隱形」了
+- 所以它開始「隱形」了 🫥
   - 原本的梭砂貝母是 🟢 綠色葉片，🟡 黃色花
-  - 但研究者發現，採摘壓力大的地區，植物逐漸變成 🟤 棕色，⚫ 灰色
+  - 但研究者發現，採摘壓力大的地區，植物逐漸變成 🟤 棕色，⚫ 灰色 (看不見我看不見我看不見我)
 
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/color_of_Fritillaria_delavayi_change_due_to_human_harvesting_pressure.jpg)
 
@@ -500,13 +508,14 @@ E-->mammal([哺乳類])
 
 #### 北美大角羊, Ovis canadensis
 - 由於獵人喜歡打大角公羊，作為 **Trophy Hunting** (戰利品狩獵)
-- 結果... 
+- 結果... 角竟然變得越來越小，因為...
   - 大角 → 先被射死
   - 小角 → 活得比較久 → 較有機會繁殖
-- 可以發現，演化可以因為外界環境的影響而快速演化 (尤其是當人類出手時)
+- 可以發現，演化可以因為**外界環境的影響而快速演化 (尤其是當人類出手時)**
 
 > [!Important]
 > - 達爾文覺得自己看不到，我們馬上打臉 🤣
+> - 以下的演化樹是用sequencing得到的 "病毒演化"，這些病毒株的演化速度超快 😲
 
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/image_bank/main/phylogeny_tree_of_SARS-CoV_virus_1020.jpg)
 
@@ -518,11 +527,12 @@ E-->mammal([哺乳類])
 
 #### 天擇不等同於演化
 
-- 例如族群中等位基因頻率 (allele frequency) 隨時間改變，這種東西就已經是演化了，至於會不會有天擇，又是另一回事
-- 還有一個就是genetic Drift（基因漂變），想像一個小島只有 10 隻鳥，天打雷劈後死掉的剛好都是帶 a 的鳥。 allele frequency 改變了，但不是因為a鳥有什麼特殊能力，而是因為他運氣好
+- 例如族群中等位基因頻率 (allele frequency) 隨時間改變，**這種東西就已經是演化了**，至於會不會有天擇，又是另一回事
+- 還有一個就是genetic Drift（基因漂變），想像一個小島只有 10 隻鳥，天打雷劈後死掉的剛好都是帶 a 的鳥。 allele frequency 改變了，但不是因為a鳥有什麼特殊能力，而是因為他運氣好 (還是運氣差? 💀🤣)
 - 突變也不是演化，得要有環境這個因子的幫忙
 
 > [!Tip]
+> - ~~Because of the need to adapt, evolution occurs~~ ，不要搞錯了 !
 > - 不要說 "長頸鹿因為需要吃高處葉子，所以脖子變長"
 > - 而是說 "長頸鹿祖先的脖長本來就有變異。有些個體脖子較長，在食物有限時能取得更多葉子，因此留下較多後代。經過許多世代後，長脖子的性狀變得越來越普遍"
 
@@ -542,7 +552,7 @@ E-->mammal([哺乳類])
 - **Bristol strain**
   - sup-35 (+)
   - pha-1 (+)
-- 雜交之後會產生 TA/- 的雜合子，並且都存活 (TA代表解毒劑跟毒藥基因都有)
+- 雜交之後會產生 TA/- 的雜合子，並且都存活 **(TA代表解毒劑跟毒藥基因都有)**
 - 接下來讓F1自交產生F2，狀態就會是...
 
 ##### Punnett square：
@@ -554,7 +564,8 @@ E-->mammal([哺乳類])
 
 - 我們可以看到， `-/-` 就是Hawaiian strain
 - 對於有Bristol strain基因的媽媽來說，她會在排卵前就將sup-35毒素注入這些卵中
-- 也就是說，雜交後，有TA的個體可以活，但是 `-/-` 就會在胚胎裡毒死
+- 也就是說，雜交後，有TA的個體可以活，但是 `-/-` 就會在胚胎裡毒死，這基本上就是 "媽媽把孩子毒死了"
+- 也就是說，`-/-` 可以活，但是前提是他媽媽也是 `-/-` 才行
 
 > [!Tip]
 > - **TA/TA**, **TA/(-)**, **(-)/TA** : 歐耶 😎
@@ -564,7 +575,7 @@ E-->mammal([哺乳類])
 
 > [!Important]
 > - 有此可見，當沒有咽喉基因時，在自然選擇下，sup-35成為了毒性的基因，然後pha-1可以解毒
-> - (但是wild type根本沒這兩個基因，所以為什麼要在實驗室做出兩個廢物 🙂💀)
+> - (但是wild type根本沒這兩個基因，所以**為什麼要在實驗室做出兩個廢物** 🙂💀)
 
 ### Altruism
 - 此實驗還要來自於一個芝加哥大學的情況說起...
@@ -574,7 +585,7 @@ E-->mammal([哺乳類])
 
 > "Though the free rat had the option of eating all the chocolate before freeing its companion, the rat was e**qually likely to open the restrainer containing the cagemate before opening the chocolate container.**"
 
-- 也就是說，老鼠並沒有因為有了巧克力，就只選擇巧克力，展現出有趣的利他行為 (Altruism)[^2]
+- 也就是說，老鼠並沒有因為有了巧克力，就只選擇巧克力，展現出有趣的利他行為 (altruistic behaviour)[^2]
 
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/rodents_show_empathy-driven-behavior--experiment_made_by_Chicago_neuroscientists_1020.jpg)
 
@@ -589,21 +600,25 @@ E-->mammal([哺乳類])
 $$rB>C$$
 
 - 也就是親緣係數 $r$ 乘以接受者獲得的利益 $B$ ，大於幫助者的利益 $C$
-- 因此，在蜜蜂的例子裡面，「幫媽媽養妹妹 (r = 0.75)」比「自己生孩子 (r = 0.5)」更有基因利益
+- 因此，在蜜蜂的例子裡面，「幫媽媽養妹妹 (r = 0.75)」比「自己生孩子 (r = 0.5)」更有基因利益，那乾脆工蜂就負責幫忙把妹妹跟媽媽都養好 😗
 
 #### Group selection
-- 這張圖的邏輯在於: 
+
+
+![2_image](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/group_selection_and_individual_selection_1023.png)
+
+- 首先，以上的圖A的邏輯在於: 
 > [!Tip]
 > - 「你個體可能很爽，但如果大家都只顧自己，整個團體可能死掉。」
 
 - 例如很簡化地想：
-   - altruist：「我少拿一點資源，讓大家一起維持系統。」
-   - selfish：「干我屁事，我先把資源吃光。」
+   - altruist：「我少拿一點資源，讓大家一起維持系統。」🤔
+   - selfish：「干我屁事，我先把資源吃光。」🙂
 - 如果只有少量 selfish，問題可能不大
 - 但如果整個 group 都變成selfish
 - 就可能導致資源過度消耗 → group collapse → 整群死亡
 
-#### Individual celection
+#### Individual selection
 - 如果我們單看群體中的個體，很明顯的，這種群體內個體間競爭 selfish其實更容易活
 - 這會讓該群體內的selfish allele比例增高
 
@@ -634,12 +649,14 @@ $$rB>C$$
 
 #### 演化並不一定是為了適應
 - 例如可能是物理或是化學造成的影響，不影響生存 (例如眉毛很長這樣沒優勢的trait)，但依然傳給下一代
+- 例如，白翅山鴨的眼睛因為血紅素而呈現紅色，這對他的生存可能沒什麼影響，但是他有這個基因，也會傳給下一代
 - 也有可能是遺傳漂變 (就是倒楣 🙂)
 - **pleiotropy**，也就是基因多效性 (一個基因改變可以讓多性狀改變)，就是其中一個例子
-- 可能你產生適應壓力的原因是A性狀，但是對應A性狀的基因也會影響B性狀，這時B的改變就不是因為 "適應"
+- 可能你產生適應壓力的原因是A性狀，但是對應A性狀的基因也會影響B性狀，這時**B的改變就不是因為 "適應"**
 
 #### 註: 鳥類的眼睛
--  鳥類的 pecten oculi 是位於眼球內、從視神經乳頭附近伸入玻璃體（vitreous body）的一個梳狀、長在眼球內部、褶皺狀血管結構
+- 下圖是鳥類跟人類眼睛的構造比對 
+- 鳥類的 pecten oculi (梳膜) 是位於眼球內、從視神經乳頭附近伸入玻璃體（vitreous body）的一個梳狀、長在眼球內部、褶皺狀血管結構
 - 鳥類的 retina 非常活躍，而梳膜因為是一個高度血管化的構造，因此可以快速提供氧氣
 - 要記得一件事情，雖然是retina需要氧氣，但是不能因此將大量血管生成於retina，不然鳥根本看不到 (光被血管擋住)
 - 最複雜的 pecten ，莫過於猛禽的眼睛
@@ -669,7 +686,7 @@ $$rB>C$$
 > [!Important]
 > - 演化不是追求完美，而是追求「夠用就好」🐱
 
-- 由於能量或是養分的受限，並且遺傳是屬於共同祖先的延伸 (就像你不可能突然長出蝴蝶翅膀)，因此自然選擇不會篩選出完美的物種
+- 由於能量或是養分的受限，並且遺傳是屬於共同祖先的延伸 (就像你不可能突然長出蝴蝶翅膀)，因此**自然選擇不會篩選出完美的物種**
 
 #### 演化沒有終點
 - 如果演化的目標是完美，那應該會有終極物種、最佳設計、最終型態
@@ -711,13 +728,28 @@ L([light])-->prc([感光細胞])-.->n([神經纖維<br>直接傳遞訊息])
 - 工程師可以全部重做，演化不行。演化像**接手一個幾億年的祖傳程式碼庫**，所以只能...
 
 ```python
-# 祖先留下來的垃圾程式 :3
-if structure_exists:
-modify()
-else:
-keep_using()
+# version 1
+do_A()
+
+# version 2
+do_A()
+do_B()
+
+# version 15
+do_A()
+do_B()
+do_C()
+
+# version 48
+if weird_condition:
+    do_old_A()
+
+# version 92
+# 不知道誰寫的
+# 但刪掉會死 🙂
 ```
-- 最終就只能**得到許多彎路、補丁、奇怪結構，而不是最佳方案**
+
+- 最終就只能**得到許多彎路、補丁、奇怪結構的義大利麵代碼，而不是最佳方案**
 
 ### 競爭導致了甚麼?
 - 如果相似的物種共同存在，並且使用相同資源，就會**導致競爭**
@@ -728,6 +760,9 @@ keep_using()
 
 - 在下圖A圖中，可以看到，當不同物種住在一起時，彼此的性狀受到 selection 而變得**更加不同**
 - 因此鳥喙的長度也在產生越來越明顯的差異
+
+> [!Note]
+> - 這個概念可以延伸到種化的形成
 
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/phenotype_of_each_specie_become_more_different_due_toselection_when_they_live_in_the_same_enviroment_1021.png)
 
@@ -908,7 +943,7 @@ $$
 - 然後是祖先型跟faeder的雜交，大約在 50 萬年前，Faeder 等位基因和 Independent 等位基因之間罕見的重組事件產生了 **Satellite 等位基因 (粉紅色)**[^3]
 
 > [!Tip]
-> **倒位是純合致死的 (就是兩個粉色就會掛掉)**，而且倒位等位基因之間基本不會發生重組 (死亡率很高很高) 🙂
+> **倒位跟重組後的基因是純合致死的 (就是兩個黃色或是兩個粉色就會掛掉)**，而且倒位等位基因之間基本不會發生重組 (死亡率很高很高) 🙂
 
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/inversion_of_gene_can_affect_the_color_of_Ruff_1022.png)
 
@@ -983,6 +1018,7 @@ $$N_e = 10^4$$
 
 #### 突變會影響適應度
 - **大部分的突變，通常對於個體來說是負面影響較多** (也就是**deleterious**，例如錯義突變、無異突變、框移突變)。極少數的才是有可能增加適應性的
+- 基本上，無義突變是平均來說最有負面影響的
 - 下圖中就是該圖便會影響的適應性狀態，如果 s = -0.1，就代表生存率降低10%
 - 可以發現大部分的mutation， selective coefficient (s) 都是負的比較多
 
@@ -1234,7 +1270,7 @@ $$\Delta p_B \approx s_A D$$
 
 #### Corn domestication
 - 當人類在**改良大芻草**的時候，偏好了**tb1 gene**，該基因會增加頂芽優勢，使**側枝大幅減少**
-- 我們可以發現，相對於玉米，大芻草tb1 locus周圍的基因多樣性 (heterozygousity) 明顯更高，而**玉米幾乎為0**
+- 我們可以發現，相對於玉米，大芻草 (teosinte) 的 tb1 locus周圍的基因多樣性 (heterozygousity) 明顯更高，而**玉米幾乎為0**
 - 也就是說，很多不同 maize 品系，在這一大段區域的 DNA 都非常相似，就是因為**人類刻意fixed這個基因，而周圍的序列也一起被fixed了**
 
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/heterozygosity_nearby_on_the_tb1_gene_locus_was_drastically_reduced_in_maize_compared_to_teosinte_1023.png)
@@ -1331,7 +1367,6 @@ $$p_{A2} = \frac{s1}{s1 + s2}$$
 > - 為什麼長大後還要吃乳製品?
 
 - 其實根據基因分析，人類祖先多數在長大後，就會關閉自己對乳糖的代謝能力。也就是說，**"乳糖不耐症" 變成了常規操作**
-
 - 但是，在極地或是沙漠地區，難以種植農作物，十分依賴畜牧業產生的產值，因此某些 "長大後還可以吃乳製品" 的基因就被保留下來
 
 > [!Note]
@@ -1451,7 +1486,7 @@ $$\Delta z_1 = G_{1,2} \times \beta_2 > 0$$
 
 > [!Note]
 > - 即使體型不是潛水的能力的自然選擇的重點，但是體型還是會偏向增加，為什麼?
-> - 因為G_{1,2} 不是0，這兩個基因傾向一起遺傳 !! 😏
+> - 因為 $G_{1,2}$ 不是0，這兩個基因傾向一起遺傳 !! 😏
 
 #### 為什麼會有相關性
 - 造成關聯性的原因，可能是因為....
@@ -1498,7 +1533,7 @@ $$\Delta z_1 = G_{1,2} \times \beta_2 > 0$$
 
 ### genetic drift
 - 遺傳漂變，**Random changes in the frequency**
-- 個體的基因型或是表現型不是他是否能遺傳自己基因的唯一因素，還有****
+- 個體的基因型或是表現型不是他是否能遺傳自己基因的唯一因素，還有**機運問題**
 - 除此之外，基因的隨機配對、交叉跟互換，也會影響
 
 #### 你以為沒有selection就沒事了嗎?
@@ -1568,6 +1603,10 @@ $$\pi\approx 4N_e \mu_n$$
 > - $N_e$ 在現實族群裡，量通常少，而且 **"難以預測"** (畢竟你不知道誰會生)
 
 - 通常來說，如果一個族群的 $N_e$ 超大 (例如剛剛圖中 N = 500000 的驚天數字)，drift的力量就相對更低 (或是說，有更大彈性承受基因池的隨機波動)
+- 所以在數學上: 
+
+$$genetic\ drift\ strength=\frac{1}{N_e}$$
+
 
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/effective_population_size_in_different_species_1023.png)
 
@@ -1625,3 +1664,20 @@ pi |  ..      ..  ..      .
 
 ![image alt](https://raw.githubusercontent.com/Jacklyn301/2_image_bank/main/four_types_of_evolution_theory_comparison_1023.png)
 
+
+#### 想想人類族群
+
+- 隨便抓兩個人：
+  - 約有 300~400 萬個 SNP 差異
+  - 還有一些 insertion/deletion
+  - 結構變異
+- 但這兩個人：
+  - 都活得好好的
+  - 都能繁殖
+  - 都能上課考試
+  - 都能滑手機看迷因 🤣
+- 所以問題來了：
+  - **這幾百萬個差異到底有多少真的影響 fitness？**
+
+> [!Note]
+> 極少數。🙂💀
